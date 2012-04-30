@@ -196,7 +196,8 @@
     // http://paulirish.com/2008/bookmarklet-inject-new-css-rules/
     addCSS = function(css) {
         var tag;
-        if ('\v' == 'v') /* ie only */ {
+        //if ('\v' == 'v') /* ie only */ {
+        if (document.createStyleSheet) {
             document.createStyleSheet().cssText = css;
         } else {
             tag = document.createElement('style');
