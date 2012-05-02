@@ -25,10 +25,14 @@
             var result = [
                 { field: 'lq', value: this.quartiles[0] },
                 { field: 'med', value: this.quartiles[1] },
-                { field: 'uq', value: this.quartiles[2] },
-                { field: 'lo', value: this.loutlier },
-                { field: 'ro', value: this.routlier }
+                { field: 'uq', value: this.quartiles[2] }
             ];
+            if (this.loutlier !== undefined) {
+                result.push({ field: 'lo', value: this.loutlier});
+            }
+            if (this.routlier !== undefined) {
+                result.push({ field: 'ro', value: this.routlier});
+            }
             if (this.lwhisker !== undefined) {
                 result.push({ field: 'lw', value: this.lwhisker});
             }
