@@ -221,7 +221,7 @@
 
             canvasHeight--;
 
-            if (options.get('normalRangeMin') && !options.get('drawNormalOnTop')) {
+            if (options.get('normalRangeMin') !== undefined && !options.get('drawNormalOnTop')) {
                 this.drawNormalRange(canvasLeft, canvasTop, canvasHeight, canvasWidth, rangey);
             }
 
@@ -291,7 +291,7 @@
                     options.get('fillColor'), options.get('fillColor')).append();
             }
 
-            if (options.get('normalRangeMin') && options.get('drawNormalOnTop')) {
+            if (options.get('normalRangeMin') !== undefined && options.get('drawNormalOnTop')) {
                 this.drawNormalRange(canvasLeft, canvasTop, canvasHeight, canvasWidth, rangey);
             }
 
