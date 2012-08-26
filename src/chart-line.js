@@ -243,8 +243,8 @@
                         if (yvalues[i - 1] !== null) {
                             path = [];
                             paths.push(path);
-                            vertices.push(null);
                         }
+                        vertices.push(null);
                     }
                 } else {
                     if (y < this.miny) {
