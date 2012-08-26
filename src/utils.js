@@ -173,7 +173,8 @@
     all = function (val, arr, ignoreNull) {
         var i;
         for (i = arr.length; i--; ) {
-            if (arr[i] !== val || (!ignoreNull && val === null)) {
+            if (ignoreNull && arr[i] === null) continue;
+            if (arr[i] !== val) {
                 return false;
             }
         }
