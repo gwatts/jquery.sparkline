@@ -1,3 +1,9 @@
+    initStyles = function() {
+        addCSS(defaultStyles);
+    };
+
+    $(initStyles);
+
     pending = [];
     $.fn.sparkline = function (userValues, userOptions) {
         return this.each(function () {

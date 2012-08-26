@@ -152,9 +152,3 @@
             'text-align: left;' +
             '}';
 
-    initStyles = function() {
-        addCSS(defaultStyles);
-    };
-
-    $(initStyles);
-

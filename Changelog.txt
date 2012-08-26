@@ -1,6 +1,11 @@
 jQuery Sparkline Plugin ChangeLog
 http://omnipotent.net/jquery.sparkline/
 
+2.x ??
+
++ Fixed issue 6 - Loading the script dynamically will now succeed
+Thanks joeenzminger
+
 
 2.0 29/April/2012
 
