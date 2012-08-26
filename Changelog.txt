@@ -5,6 +5,8 @@ http://omnipotent.net/jquery.sparkline/
 
 + Fixed issue 6 - Loading the script dynamically will now succeed
 Thanks joeenzminger
++ Pie charts with zero in the array of values will no longer
+cause IE to display "undefined" in the page (issue 9)
 
 
 2.0 29/April/2012

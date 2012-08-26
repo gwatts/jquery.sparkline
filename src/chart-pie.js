@@ -100,9 +100,11 @@
                     options.get('borderColor'), undefined, borderWidth).append();
             }
             for (i = values.length; i--;) {
-                shape = this.renderSlice(i).append();
-                this.valueShapes[i] = shape.id; // store just the shapeid
-                this.shapes[shape.id] = i;
+                if (values[i]) { // don't render zero values
+                    shape = this.renderSlice(i).append();
+                    this.valueShapes[i] = shape.id; // store just the shapeid
+                    this.shapes[shape.id] = i;
+                }
             }
             target.render();
         }
