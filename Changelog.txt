@@ -14,6 +14,9 @@ cause IE to display "undefined" in the page (issue 9)
 + Null values in line charts would cause value highligting to be
 incorrect (issue 4)
 
++ Raise default z-index for tooltips to ensure they always appear on top
+of the chart (issue 5)
+
 
 2.0 29/April/2012
 
