@@ -5,11 +5,15 @@
         type: 'bullet',
 
         init: function (el, values, options, width, height) {
-            var min, max;
+            var min, max, vals;
             bullet._super.init.call(this, el, values, options, width, height);
 
             // values: target, performance, range1, range2, range3
-            values = $.map(values, Number);
+            this.values = values = normalizeValues(values);
+            // target or performance could be null
+            vals = values.slice();
+            vals[0] = vals[0] === null ? vals[2] : vals[0];
+            vals[1] = values[1] === null ? vals[2] : vals[1];
             min = Math.min.apply(Math, values);
             max = Math.max.apply(Math, values);
             if (options.get('base') === undefined) {
