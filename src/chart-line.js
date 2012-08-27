@@ -172,7 +172,7 @@
                 canvasTop, canvasLeft,
                 vertex, path, paths, x, y, xnext, xpos, xposnext,
                 last, next, yvalcount, lineShapes, fillShapes, plen,
-                valueSpots, color, xvalues, yvalues, i;
+                valueSpots, hlSpotsEnabled, color, xvalues, yvalues, i;
 
             if (!line._super.render.call(this)) {
                 return;
@@ -200,18 +200,20 @@
             }
             if (spotRadius) {
                 // adjust the canvas size as required so that spots will fit
-                if (options.get('minSpotColor') || (options.get('spotColor') && yvalues[yvallast] === this.miny)) {
+                hlSpotsEnabled = options.get('highlightSpotColor') &&  !options.get('disableInteraction');
+                if (hlSpotsEnabled || options.get('minSpotColor') || (options.get('spotColor') && yvalues[yvallast] === this.miny)) {
                     canvasHeight -= Math.ceil(spotRadius);
                 }
-                if (options.get('maxSpotColor') || (options.get('spotColor') && yvalues[yvallast] === this.maxy)) {
+                if (hlSpotsEnabled || options.get('maxSpotColor') || (options.get('spotColor') && yvalues[yvallast] === this.maxy)) {
                     canvasHeight -= Math.ceil(spotRadius);
                     canvasTop += Math.ceil(spotRadius);
                 }
-                if ((options.get('minSpotColor') || options.get('maxSpotColor')) && (yvalues[0] === this.miny || yvalues[0] === this.maxy)) {
+                if (hlSpotsEnabled ||
+                     ((options.get('minSpotColor') || options.get('maxSpotColor')) && (yvalues[0] === this.miny || yvalues[0] === this.maxy))) {
                     canvasLeft += Math.ceil(spotRadius);
                     canvasWidth -= Math.ceil(spotRadius);
                 }
-                if (options.get('spotColor') ||
+                if (hlSpotsEnabled || options.get('spotColor') ||
                     (options.get('minSpotColor') || options.get('maxSpotColor') &&
                         (yvalues[yvallast] === this.miny || yvalues[yvallast] === this.maxy))) {
                     canvasWidth -= Math.ceil(spotRadius);

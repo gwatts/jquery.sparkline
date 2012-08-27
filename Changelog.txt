@@ -20,6 +20,9 @@ of the chart (issue 5)
 + Allow target and performance values to be set to null for bullet charts,
 omitting them from the chart (issue 3)
 
++ Fix clipping of highlight marker spots if min/max/final spots are
+disabled in line charts (issue 31)
+
 
 2.0 29/April/2012
 
