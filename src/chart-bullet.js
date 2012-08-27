@@ -111,12 +111,16 @@
                 this.shapes[shape.id] = 'r' + i;
                 this.valueShapes['r' + i] = shape.id;
             }
-            shape = this.renderPerformance().append();
-            this.shapes[shape.id] = 'p1';
-            this.valueShapes.p1 = shape.id;
-            shape = this.renderTarget().append();
-            this.shapes[shape.id] = 't0';
-            this.valueShapes.t0 = shape.id;
+            if (this.values[1] !== null) {
+                shape = this.renderPerformance().append();
+                this.shapes[shape.id] = 'p1';
+                this.valueShapes.p1 = shape.id;
+            }
+            if (this.values[0] !== null) {
+                shape = this.renderTarget().append();
+                this.shapes[shape.id] = 't0';
+                this.valueShapes.t0 = shape.id;
+            }
             target.render();
         }
     });

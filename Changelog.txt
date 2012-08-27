@@ -17,6 +17,9 @@ incorrect (issue 4)
 + Raise default z-index for tooltips to ensure they always appear on top
 of the chart (issue 5)
 
++ Allow target and performance values to be set to null for bullet charts,
+omitting them from the chart (issue 3)
+
 
 2.0 29/April/2012
 
