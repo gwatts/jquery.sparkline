@@ -3,6 +3,9 @@ http://omnipotent.net/jquery.sparkline/
 
 2.x ??
 
++ Added support for Internet Explorer 10 (issue 18)
+Thanks Jonathan Sampson
+
 + Fixed issue 6 - Loading the script dynamically will now succeed
 Thanks joeenzminger
 
@@ -22,6 +25,10 @@ omitting them from the chart (issue 3)
 
 + Fix clipping of highlight marker spots if min/max/final spots are
 disabled in line charts (issue 31)
+
++ Line charts with normalRangeMin=0 will now render the
+normal range correctly (issue 7)
+Thanks Tim Mathewso
 
 
 2.0 29/April/2012
