@@ -30,6 +30,9 @@ disabled in line charts (issue 31)
 normal range correctly (issue 7)
 Thanks Tim Mathewso
 
++ Add support for AMD based module loaders such as requirejs (PR 32)
+Thanks Tim Tucker
+
 
 2.0 29/April/2012
 
