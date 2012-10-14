@@ -102,10 +102,16 @@
         var vl;
         if (q === 2) {
             vl = Math.floor(values.length / 2);
-            return values.length % 2 ? values[vl] : (values[vl] + values[vl + 1]) / 2;
+            return values.length % 2 ? values[vl] : (values[vl-1] + values[vl]) / 2;
         } else {
-            vl = Math.floor(values.length / 4);
-            return values.length % 2 ? (values[vl * q] + values[vl * q + 1]) / 2 : values[vl * q];
+            if (values.length % 2 ) { // odd
+                vl = (values.length * q + q) / 4;
+                return vl % 1 ? (values[Math.floor(vl)] + values[Math.floor(vl) - 1]) / 2 : values[vl-1];
+            } else { //even
+                vl = (values.length * q + 2) / 4;
+                return vl % 1 ? (values[Math.floor(vl)] + values[Math.floor(vl) - 1]) / 2 :  values[vl-1];
+
+            }
         }
     };
 
