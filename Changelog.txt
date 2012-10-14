@@ -33,6 +33,9 @@ Thanks Tim Mathewso
 + Add support for AMD based module loaders such as requirejs (PR 32)
 Thanks Tim Tucker
 
++ Fix interquartile range calculation used by box plots (PR 10)
+Thanks Claudio Riva
+
 
 2.0 29/April/2012
 
