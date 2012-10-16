@@ -3,10 +3,13 @@ http://omnipotent.net/jquery.sparkline/
 
 2.x ??
 
+
+2.1 15/October/2012
+
 + Added support for Internet Explorer 10 (issue 18)
 Thanks Jonathan Sampson
 
-+ Fixed issue 6 - Loading the script dynamically will now succeed
++ Enable the plugin to be loaded dynamically (issue 6)
 Thanks joeenzminger
 
 + Pie charts with zero in the array of values will no longer
@@ -23,11 +26,11 @@ of the chart (issue 5)
 + Allow target and performance values to be set to null for bullet charts,
 omitting them from the chart (issue 3)
 
-+ Fix clipping of highlight marker spots if min/max/final spots are
-disabled in line charts (issue 31)
++ Fix clipping of highlight marker spots if min/max/final spots are disabled 
+in line charts (issue 31)
 
-+ Line charts with normalRangeMin=0 will now render the
-normal range correctly (issue 7)
++ Line charts with normalRangeMin=0 will now render the normal range 
+correctly (issue 7)
 Thanks Tim Mathewso
 
 + Add support for AMD based module loaders such as requirejs (PR 32)
