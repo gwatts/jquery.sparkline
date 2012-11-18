@@ -59,7 +59,7 @@
         _drawPieSlice: function (shapeid, x, y, radius, startAngle, endAngle, lineColor, fillColor) {
             var vpath, startx, starty, endx, endy, stroke, fill, vel;
             if (startAngle === endAngle) {
-                return;  // VML seems to have problem when start angle equals end angle.
+                return '';  // VML seems to have problem when start angle equals end angle.
             }
             if ((endAngle - startAngle) === (2 * Math.PI)) {
                 startAngle = 0.0;  // VML seems to have a problem when drawing a full circle that doesn't start 0
@@ -71,9 +71,18 @@
             endx = x + Math.round(Math.cos(endAngle) * radius);
             endy = y + Math.round(Math.sin(endAngle) * radius);
 
-            // Prevent very small slices from being mistaken as a whole pie
+            if (startx === endx && starty === endy) {
+                if ((endAngle - startAngle) < Math.PI) {
+                    // Prevent very small slices from being mistaken as a whole pie
+                    return '';
+                }
+                // essentially going to be the entire circle, so ignore startAngle
+                startx = endx = x + radius;
+                starty = endy = y;
+            }
+
             if (startx === endx && starty === endy && (endAngle - startAngle) < Math.PI) {
-                return;
+                return '';
             }
 
             vpath = [x - radius, y - radius, x + radius, y + radius, startx, starty, endx, endy];

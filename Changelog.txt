@@ -3,6 +3,9 @@ http://omnipotent.net/jquery.sparkline/
 
 2.x ??
 
++ Fix a couple of issues rendering pie charts in IE when they slices that make
+up a negligible percentage of the whole chart.
+
 
 2.1 15/October/2012
 
