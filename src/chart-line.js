@@ -319,7 +319,7 @@
                 }
 
             }
-            if (spotRadius && options.get('spotColor')) {
+            if (spotRadius && options.get('spotColor') && yvalues[yvallast] !== null) {
                 target.drawCircle(canvasLeft + Math.round((xvalues[xvalues.length - 1] - this.minx) * (canvasWidth / rangex)),
                     canvasTop + Math.round(canvasHeight - (canvasHeight * ((yvalues[yvallast] - this.miny) / rangey))),
                     spotRadius, undefined,

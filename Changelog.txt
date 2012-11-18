@@ -4,7 +4,9 @@ http://omnipotent.net/jquery.sparkline/
 2.x ??
 
 + Fix a couple of issues rendering pie charts in IE when they slices that make
-up a negligible percentage of the whole chart.
+up a negligible percentage of the whole chart (issue 49)
+
++ Don't display line chart final marker if final value is null (issue 46)
 
 
 2.1 15/October/2012
