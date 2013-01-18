@@ -8,6 +8,8 @@ up a negligible percentage of the whole chart (issue 49)
 
 + Don't display line chart final marker if final value is null (issue 46)
 
++ Make compatible with jQuery 1.9.0 (issue 60)
+
 
 2.1 15/October/2012
 

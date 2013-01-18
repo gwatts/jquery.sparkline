@@ -218,5 +218,5 @@
         remove, isNumber, all, sum, addCSS, ensureArray, formatNumber, RangeMap,
         MouseHandler, Tooltip, barHighlightMixin,
         line, bar, tristate, discrete, bullet, pie, box, defaultStyles, initStyles,
-         VShape, VCanvas_base, VCanvas_canvas, VCanvas_vml, pending, shapeCount = 0;
+        VShape, VCanvas_base, VCanvas_canvas, VCanvas_vml, pending, shapeCount = 0;
 
