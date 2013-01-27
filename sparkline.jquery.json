@@ -3,12 +3,13 @@
     "title": "jQuery Sparkline",
     "description": "Easily generate small, inline sparkline charts directly in the browser",
     "keywords": [
+        "canvas",
         "charts",
-        "sparklines",
+        "graphics",
         "graphing",
         "graphs",
-        "graphics",
-        "canvas",
+        "sparklines",
+        "ui",
         "vml"
     ],
     "version": "2.1.1",
