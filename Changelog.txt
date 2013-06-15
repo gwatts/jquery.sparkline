@@ -2,6 +2,11 @@ jQuery Sparkline Plugin ChangeLog
 http://omnipotent.net/jquery.sparkline/
 
 
+2.1.2 ???
+
++ Make compatible with jQuery 1.10
+
+
 2.1.1 26/January/2013
 
 + Fix a couple of issues rendering pie charts in IE when they slices that make
