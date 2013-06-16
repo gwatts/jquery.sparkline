@@ -2,11 +2,17 @@ jQuery Sparkline Plugin ChangeLog
 http://omnipotent.net/jquery.sparkline/
 
 
-2.1.2 ???
+2.1.2 15/June/2013
 
 + Make compatible with jQuery 1.10
 
 + Fix intermittent "undefined error" with IE8 (issue 64)
+Thanks Tim Tucker
+
++ Performance/minification size improvement (PR 34)
+Thanks Tim Tucker
+
++ Prevent the plugin from being instatiated more than once (PR 37)
 Thanks Tim Tucker
 
 
