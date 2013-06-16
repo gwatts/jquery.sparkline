@@ -204,11 +204,10 @@
 
 (function(factory) {
     if(typeof define === 'function' && define.amd) {
-		define(['jquery'], factory);
-	}
-	else {
-		factory(jQuery);
-	}
+        define(['jquery'], factory);
+    } else if (jQuery && !jQuery.fn.sparkline) {
+        factory(jQuery);
+    }
 }
 (function($) {
     'use strict';
