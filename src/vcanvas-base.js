@@ -1,20 +1,6 @@
     // Setup a very simple "virtual canvas" to make drawing the few shapes we need easier
     // This is accessible as $(foo).simpledraw()
 
-    // Detect browser renderer support
-    (function() {
-        if (document.namespaces && !document.namespaces.v) {
-            $.fn.sparkline.hasVML = true;
-            document.namespaces.add('v', 'urn:schemas-microsoft-com:vml', '#default#VML');
-        } else {
-            $.fn.sparkline.hasVML = false;
-        }
-
-        var el = document.createElement('canvas');
-        $.fn.sparkline.hasCanvas = !!(el.getContext && el.getContext('2d'));
-
-    })()
-
     VShape = createClass({
         init: function (target, id, type, args) {
             this.target = target;

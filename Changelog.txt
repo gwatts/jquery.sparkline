@@ -6,6 +6,9 @@ http://omnipotent.net/jquery.sparkline/
 
 + Make compatible with jQuery 1.10
 
++ Fix intermittent "undefined error" with IE8 (issue 64)
+Thanks Tim Tucker
+
 
 2.1.1 26/January/2013
 
