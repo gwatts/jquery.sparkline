@@ -1,6 +1,10 @@
 jQuery Sparkline Plugin ChangeLog
 http://omnipotent.net/jquery.sparkline/
 
+2.1.x ???
+
++ Fix for IE <= 9 for loading CSS when 31 stylesheets are already present
+
 
 2.1.2 15/June/2013
 

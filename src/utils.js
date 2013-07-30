@@ -202,14 +202,22 @@
 
     // http://paulirish.com/2008/bookmarklet-inject-new-css-rules/
     addCSS = function(css) {
-        var tag;
-        //if ('\v' == 'v') /* ie only */ {
+        var tag, iefail;
         if (document.createStyleSheet) {
-            document.createStyleSheet().cssText = css;
+            try {
+                document.createStyleSheet().cssText = css;
+                return;
+            } catch (e) {
+                // IE <= 9 maxes out at 31 stylesheets; inject into page instead.
+                iefail = true;
+            }
+        }
+        tag = document.createElement('style');
+        tag.type = 'text/css';
+        document.getElementsByTagName('head')[0].appendChild(tag);
+        if (iefail) {
+            document.styleSheets[document.styleSheets.length - 1].cssText = css;
         } else {
-            tag = document.createElement('style');
-            tag.type = 'text/css';
-            document.getElementsByTagName('head')[0].appendChild(tag);
             tag[(typeof document.body.style.WebkitAppearance == 'string') /* webkit only */ ? 'innerText' : 'innerHTML'] = css;
         }
     };
